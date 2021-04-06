@@ -16,7 +16,7 @@ const BlogPage: React.FC<STATICPROPS> = ({ posts }) => {
   // ログイン可否の判定用のステート(ログイン成功時、JWTトークンをCookieに保存するため、Cookieが存在するかしないかの判定のためのステート)
   const [hasToken, setHasToken] = useState(false)
   const logout = () => {
-    cookie.remove('acceess_token')
+    cookie.remove('access_token')
     setHasToken(false)
   }
   const deletePost = async (id: number) => {
